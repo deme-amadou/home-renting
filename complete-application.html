@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Relestate | Rent this Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0a0f18",
+                        "surface-dark": "#161e2d",
+                        "neutral-dark": "#334155",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .step-active {
+            color: #256af4;
+            border-bottom: 3px solid #256af4;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-slate-100 min-h-screen">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <!-- Navigation -->
+        <header class="flex items-center justify-between px-10 py-6">
+            <a href="index.html" class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined text-3xl font-bold">domain</span>
+                <h1 class="text-white text-xl font-bold tracking-tight">Relestate</h1>
+            </a>
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-400">
+                    <a href="index.html" class="hover:text-white transition-colors">Homes</a>
+                    <a href="#" class="text-primary">Applications</a>
+                    <a href="#" class="hover:text-white transition-colors">Messages</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="bg-slate-800 p-2 rounded-full text-slate-400 hover:text-white">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div class="h-10 w-10 rounded-full bg-slate-700 overflow-hidden border-2 border-slate-600">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJBcjM6ElpDfrf32dYntVulWpnnrjR18wpmCObKLeSLVeXX4ikgDrDgwaxHAsNaEKztHoi0GdesHiKgMPOWN0f55K0o_8Wl9nQ6n3zKFYa-I-oX5WrGrYTBnLZBNvx9LPjc39STE0ZReE9Kc3I2neSURmdKMJCODNT2UmZtCYUEfseV2cfWh06IO6OXDwQsHoUNSxG6pmtHofjyZjZKXNuukflh6C62LSQohncf9Ve_8Jt4_brCUzc2hb5nlqC3MGWt_6m763VPaI"
+                            alt="User">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 max-w-6xl mx-auto w-full px-6 py-8">
+            <div class="flex flex-col items-center mb-12">
+                <!-- Tabs -->
+                <div
+                    class="flex items-center gap-16 mb-8 uppercase tracking-widest text-[10px] font-bold text-slate-500">
+                    <div class="step-active pb-2">Dates</div>
+                    <div class="pb-2">Terms</div>
+                    <div class="pb-2">Review</div>
+                </div>
+                <!-- Title -->
+                <h1 class="text-4xl font-bold text-white mb-2">Rent this Home</h1>
+                <div class="flex items-center gap-2 text-slate-400 text-sm">
+                    <span class="material-symbols-outlined text-sm">location_on</span>
+                    1234 Modern Ave, Design District
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Left: Form Steps -->
+                <div class="lg:col-span-2 flex flex-col gap-12">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="h-8 w-8 bg-primary rounded-full flex items-center justify-center font-bold text-white text-sm">
+                                1</div>
+                            <h2 class="text-xl font-bold text-white uppercase tracking-tight">Select Move-in Date</h2>
+                        </div>
+                        <div class="bg-surface-dark/50 border border-slate-800 rounded-3xl p-8">
+                            <div class="flex items-center justify-between mb-8">
+                                <button class="p-2 hover:bg-slate-800 rounded-lg transition-colors">
+                                    <span class="material-symbols-outlined">chevron_left</span>
+                                </button>
+                                <span class="font-bold text-lg">November 2023</span>
+                                <button class="p-2 hover:bg-slate-800 rounded-lg transition-colors">
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </button>
+                            </div>
+                            <div
+                                class="calendar-grid text-center text-xs font-bold text-slate-500 mb-6 uppercase tracking-wider">
+                                <div>S</div>
+                                <div>M</div>
+                                <div>T</div>
+                                <div>W</div>
+                                <div>T</div>
+                                <div>F</div>
+                                <div>S</div>
+                            </div>
+                            <div class="calendar-grid text-center gap-y-4">
+                                <!-- Placeholder days -->
+                                <div class="text-slate-800">29</div>
+                                <div class="text-slate-800">30</div>
+                                <div class="text-slate-800">31</div>
+                                <div class="py-3">1</div>
+                                <div class="py-3">2</div>
+                                <div class="py-3">3</div>
+                                <div class="py-3">4</div>
+                                <div class="py-3">5</div>
+                                <div class="py-3">6</div>
+                                <div class="py-3">7</div>
+                                <div class="py-3">8</div>
+                                <div class="py-3">9</div>
+                                <div class="py-3 font-bold text-slate-100">10</div>
+                                <div class="py-3 bg-primary rounded-xl text-white font-bold cursor-pointer">11</div>
+                                <div class="py-3">12</div>
+                                <div class="py-3">13</div>
+                                <div class="py-3">14</div>
+                                <div class="py-3">15</div>
+                                <div class="py-3">16</div>
+                                <div class="py-3">17</div>
+                                <div class="py-3">18</div>
+                                <div class="py-3">19</div>
+                                <div class="py-3">20</div>
+                                <div class="py-3">21</div>
+                                <div class="py-3">22</div>
+                                <div class="py-3">23</div>
+                                <div class="py-3">24</div>
+                                <div class="py-3">25</div>
+                                <div class="py-3">26</div>
+                                <div class="py-3">27</div>
+                                <div class="py-3">28</div>
+                                <div class="py-3">29</div>
+                                <div class="py-3">30</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="h-8 w-8 bg-primary rounded-full flex items-center justify-center font-bold text-white text-sm">
+                                2</div>
+                            <h2 class="text-xl font-bold text-white uppercase tracking-tight">Choose Lease Duration</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div
+                                class="bg-surface-dark/50 border border-slate-800 p-6 rounded-2xl flex flex-col gap-1 cursor-pointer hover:border-slate-600 transition-colors">
+                                <span class="text-[10px] font-bold text-slate-500 uppercase">Standard</span>
+                                <h3 class="text-lg font-bold">6 Months</h3>
+                                <p class="text-primary font-bold text-sm">$2,450 / mo</p>
+                            </div>
+                            <div
+                                class="bg-surface-dark border-2 border-primary p-6 rounded-2xl flex flex-col gap-1 relative overflow-hidden cursor-pointer">
+                                <div
+                                    class="absolute top-0 right-0 bg-primary px-3 py-1 rounded-bl-lg text-[8px] font-bold text-white uppercase">
+                                    Best Value</div>
+                                <span class="text-[10px] font-bold text-primary uppercase">Recommended</span>
+                                <h3 class="text-lg font-bold">12 Months</h3>
+                                <p class="text-primary font-bold text-sm">$2,200 / mo</p>
+                            </div>
+                            <div
+                                class="bg-surface-dark/50 border border-slate-800 p-6 rounded-2xl flex flex-col gap-1 cursor-pointer hover:border-slate-600 transition-colors">
+                                <span class="text-[10px] font-bold text-slate-500 uppercase">Long Term</span>
+                                <h3 class="text-lg font-bold">18 Months</h3>
+                                <p class="text-primary font-bold text-sm">$2,100 / mo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Terms -->
+                    <div class="pt-8 border-t border-slate-800 flex items-start gap-4">
+                        <input type="checkbox" id="terms"
+                            class="mt-1 h-5 w-5 bg-surface-dark border-slate-800 rounded text-primary focus:ring-primary focus:ring-offset-background-dark">
+                        <label for="terms" class="text-sm text-slate-400 leading-relaxed">
+                            I agree to the <a href="#" class="text-primary hover:underline">Terms of Service</a>, <a
+                                href="#" class="text-primary hover:underline">Fair Housing Policy</a>, and consent to a
+                            background and credit check as part of the application process.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Right: Summary Sidebar -->
+                <div class="lg:col-span-1">
+                    <div
+                        class="sticky top-28 bg-surface-dark border border-slate-800 rounded-3xl p-6 shadow-2xl flex flex-col gap-8">
+                        <div>
+                            <div class="h-48 w-full bg-slate-800 rounded-2xl mb-6 overflow-hidden relative">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf5t97A5dnG5aI8bVrAa7-F33u0YyKjStHuaLFjSXU3GIEyLoF7zXWF7vHpAWNLU367IcvOpq-t3SDt2jFl6qJFXJfpDwiO5olSLGBs5IL1MFCB0bccNTQE2uKHDZEVehX6RmrXaVwRpke9ULIix4AjKC2IL727PJ8t4lWHUuplhSQu0dXjaibTkxpB7GB_lGAS9pth2nFCVwBeWR4lmXwItqjUCRFlIRpVVUnGHYpmdRFeQIeuYUA38gSESv6L6ZSCGgYz83xWdg"
+                                    class="w-full h-full object-cover" alt="Property">
+                                <div
+                                    class="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm px-3 py-1 rounded text-[8px] font-bold uppercase text-white">
+                                    Selected Property</div>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-6">Application Summary</h3>
+                            <div class="flex flex-col gap-4 text-sm">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="text-slate-400">Monthly Rent</span>
+                                    <span class="font-bold text-white">$2,200.00</span>
+                                </div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="text-slate-400">Security Deposit</span>
+                                    <span class="font-bold text-white">$2,200.00</span>
+                                </div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="text-slate-400">Application Fee</span>
+                                    <span class="font-bold text-white">$45.00</span>
+                                </div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="text-slate-400">Cleaning Fee (One-time)</span>
+                                    <span class="font-bold text-white">$250.00</span>
+                                </div>
+                                <div class="h-px bg-slate-800 my-2"></div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="text-slate-100 font-bold">Total due at signing</span>
+                                    <span class="text-3xl font-bold text-primary">$4,695.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full py-4 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+                            Submit Application
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </button>
+
+                        <p class="text-[10px] text-center text-slate-500 leading-tight">
+                            YOU WON'T BE CHARGED UNTIL THE LANDLORD APPROVES YOUR APPLICATION
+                        </p>
+
+                        <div class="bg-primary/5 border border-primary/10 rounded-2xl p-4 flex gap-4 items-start">
+                            <span class="material-symbols-outlined text-primary">headset_mic</span>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-xs font-bold text-white">Need help with your application?</span>
+                                <p class="text-[10px] text-slate-500 leading-relaxed">Our support team is available 24/7
+                                    to guide you through the leasing process.</p>
+                                <button
+                                    class="text-[10px] font-bold text-primary hover:underline text-left mt-1">Contact
+                                    Support</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer
+            class="border-t border-slate-900 py-12 px-10 text-slate-500 text-xs flex flex-col md:flex-row justify-between items-center gap-6 mt-12">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-xl">domain</span>
+                <span class="font-bold text-white">Relestate</span>
+            </div>
+            <div class="flex gap-8">
+                <a href="#" class="hover:text-white transition-colors">Help Center</a>
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+            </div>
+            <div>© 2023 Relestate Inc. All rights reserved.</div>
+        </footer>
+    </div>
+</body>
+
+</html>

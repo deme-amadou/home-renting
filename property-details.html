@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Relestate | Modern Cliffside Villa</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1e293b",
+                        "neutral-dark": "#334155",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Navigation Bar -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between border-b border-neutral-dark/30 bg-background-dark/80 backdrop-blur-md px-6 md:px-10 py-4">
+            <div class="flex items-center gap-8">
+                <a href="index.html" class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl font-bold">domain</span>
+                    <h2 class="text-white text-xl font-bold leading-tight tracking-tight">Relestate</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors"
+                        href="index.html">Explore</a>
+                    <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">Saved</a>
+                    <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">My
+                        Trips</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div
+                    class="hidden lg:flex items-center bg-surface-dark rounded-lg px-3 py-1.5 border border-neutral-dark/50">
+                    <span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+                    <input
+                        class="bg-transparent border-none focus:ring-0 text-sm text-white placeholder:text-slate-500 w-48"
+                        placeholder="Search homes..." type="text" />
+                </div>
+                <button class="flex items-center justify-center p-2 text-slate-400 hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <div class="h-8 w-px bg-neutral-dark/50 mx-2"></div>
+                <button class="flex items-center gap-2 group">
+                    <div
+                        class="h-9 w-9 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center overflow-hidden">
+                        <img class="h-full w-full object-cover" data-alt="User profile avatar portrait"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJBcjM6ElpDfrf32dYntVulWpnnrjR18wpmCObKLeSLVeXX4ikgDrDgwaxHAsNaEKztHoi0GdesHiKgMPOWN0f55K0o_8Wl9nQ6n3zKFYa-I-oX5WrGrYTBnLZBNvx9LPjc39STE0ZReE9Kc3I2neSURmdKMJCODNT2UmZtCYUEfseV2cfWh06IO6OXDwQsHoUNSxG6pmtHofjyZjZKXNuukflh6C62LSQohncf9Ve_8Jt4_brCUzc2hb5nlqC3MGWt_6m763VPaI" />
+                    </div>
+                    <span
+                        class="hidden sm:block text-sm font-medium text-slate-200 group-hover:text-white">Profile</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-10 py-8">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+                <a href="#" class="hover:text-white">California</a>
+                <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+                <span class="text-white font-medium">Malibu Cliffside</span>
+            </nav>
+
+            <div class="flex flex-col gap-6">
+                <!-- Header Info -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Modern Cliffside Villa</h1>
+                        <div class="flex items-center gap-4 text-sm">
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-primary text-sm fill-1">star</span>
+                                <span class="font-bold text-white">4.98</span>
+                                <span class="text-slate-400">· 124 reviews</span>
+                            </div>
+                            <span class="text-slate-400">·</span>
+                            <span class="text-slate-400">Malibu, California</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 bg-surface-dark border border-neutral-dark/30 rounded-lg text-sm text-white hover:bg-neutral-dark transition-colors">
+                            <span class="material-symbols-outlined text-sm">share</span>
+                            Share
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 bg-surface-dark border border-neutral-dark/30 rounded-lg text-sm text-white hover:bg-neutral-dark transition-colors">
+                            <span class="material-symbols-outlined text-sm">favorite</span>
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bento Gallery -->
+                <div
+                    class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-3 h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
+                    <div class="md:col-span-2 md:row-span-2 relative overflow-hidden group">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf5t97A5dnG5aI8bVrAa7-F33u0YyKjStHuaLFjSXU3GIEyLoF7zXWF7vHpAWNLU367IcvOpq-t3SDt2jFl6qJFXJfpDwiO5olSLGBs5IL1MFCB0bccNTQE2uKHDZEVehX6RmrXaVwRpke9ULIix4AjKC2IL727PJ8t4lWHUuplhSQu0dXjaibTkxpB7GB_lGAS9pth2nFCVwBeWR4lmXwItqjUCRFlIRpVVUnGHYpmdRFeQIeuYUA38gSESv6L6ZSCGgYz83xWdg"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            alt="Villa Exterior">
+                        <button
+                            class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-lg text-xs font-bold shadow-lg flex items-center gap-2 hover:bg-white transition-colors">
+                            <span class="material-symbols-outlined text-sm">grid_view</span>
+                            Show all photos
+                        </button>
+                    </div>
+                    <div class="md:col-span-1 md:row-span-1 overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBqp-5UGmbxLo69-aYMhjSfS6G3_t_tb_cwB4UrEmeiAQctuFDLT6sLt_1r0HjLRQToA4T5joqJ-r3ulW9PmwPzeLLrWmm2RR7H1l9Cq8eKxa7hOd-2SONAwR3L5UTKm9m11ehn1OiznQ25bQfO9_er6YfdckfZ69_RXWhesJvRPHpAIbRXuSLqxsMGjRORF25w5jidLFU1RqQMA5nprVmzy-HBkcQzEXkHMem1fZlI5Hg6tx7SUDNFjo5DNs4UqHo3qLacqxbQlI"
+                            class="w-full h-full object-cover hover:opacity-90 transition-opacity" alt="Living Room">
+                    </div>
+                    <div class="md:col-span-1 md:row-span-1 overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAChwyzWZw4vQNEaLeZK5mqLnd-j8MlMSBPYgDndea6Q0MTsBz6s53fz_z6d4gIOx_Ai6DEb9eM7UYNeyOLH1yUhgxH-0y_VwVfASmKnBMCFP7ZGgaGi2OG_jjb42dA04OF4Fq0liNv-WgPbDNhtCYduAbUYiIvGdBrNTyBNbG9CwEE5mOimV8a7s3DWbKzM1u2oTVJ49nRWvt5DLCALykqiL8qhO9fMLOSj2gBw6I8vyz2-Sr9k1ffkCKcVyRg9Ro0BRIbhiR5AmQ"
+                            class="w-full h-full object-cover hover:opacity-90 transition-opacity" alt="Pool Area">
+                    </div>
+                    <div class="md:col-span-2 md:row-span-1 overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdVJclL7a-lcXpnrooSIFbhVdMZ-5Gk0yd6f4EOQS9V1dP8qtuLD1zIQ_nh1TiI_hzksS_iUAfhXwGSxwCJ_1iBjhN4MpxuhI9wmOZ0_jgsj2RM4F-OJlg7VqGEEp1FjUJT3lqUFK6t-dBiBNIZhE9gmgGc4H9wowXMjHLcTeX4qI967nfC7WMf2sRLY4XZTQPCqILiaRJkEsa4xhND9B30-ayApd75-f1d9fxEdOs5It859nDxxAmBX_baYwxJnXaOJVkvvuGVYA"
+                            class="w-full h-full object-cover hover:opacity-90 transition-opacity" alt="Ocean View">
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-4">
+                    <!-- Left Column: Details -->
+                    <div class="lg:col-span-2 flex flex-col gap-8">
+                        <div class="flex items-center justify-between pb-8 border-b border-neutral-dark/30">
+                            <div>
+                                <h2 class="text-2xl font-bold text-white">Hosted by Julianne</h2>
+                                <p class="text-slate-400 text-sm">Superhost · 5 years hosting</p>
+                            </div>
+                            <div class="h-14 w-14 rounded-full overflow-hidden border-2 border-primary/20">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJBcjM6ElpDfrf32dYntVulWpnnrjR18wpmCObKLeSLVeXX4ikgDrDgwaxHAsNaEKztHoi0GdesHiKgMPOWN0f55K0o_8Wl9nQ6n3zKFYa-I-oX5WrGrYTBnLZBNvx9LPjc39STE0ZReE9Kc3I2neSURmdKMJCODNT2UmZtCYUEfseV2cfWh06IO6OXDwQsHoUNSxG6pmtHofjyZjZKXNuukflh6C62LSQohncf9Ve_8Jt4_brCUzc2hb5nlqC3MGWt_6m763VPaI"
+                                    alt="Host">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-xl font-bold text-white">About this space</h3>
+                            <p class="text-slate-400 leading-relaxed">
+                                Perched on the edges of the Malibu cliffs, this architectural masterpiece offers
+                                unparalleled views of the Pacific. With floor-to-ceiling windows and sustainable design,
+                                the villa blends luxury with natural beauty. Experience breathtaking sunsets from the
+                                infinity pool or enjoy a private chef's dinner in the state-of-the-art kitchen.
+                            </p>
+                            <button class="flex items-center gap-1 text-white font-bold text-sm hover:underline w-fit">
+                                Read more <span class="material-symbols-outlined text-sm">chevron_right</span>
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col gap-6 pt-8 border-t border-neutral-dark/30">
+                            <h3 class="text-xl font-bold text-white">What this place offers</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="flex items-center gap-4 text-slate-300">
+                                    <span class="material-symbols-outlined text-primary">wifi</span>
+                                    <span>High-speed Fiber WiFi</span>
+                                </div>
+                                <div class="flex items-center gap-4 text-slate-300">
+                                    <span class="material-symbols-outlined text-primary">pool</span>
+                                    <span>Private Infinity Pool</span>
+                                </div>
+                                <div class="flex items-center gap-4 text-slate-300">
+                                    <span class="material-symbols-outlined text-primary">flatware</span>
+                                    <span>Gourmet Kitchen</span>
+                                </div>
+                                <div class="flex items-center gap-4 text-slate-300">
+                                    <span class="material-symbols-outlined text-primary">work</span>
+                                    <span>Dedicated Workspace</span>
+                                </div>
+                                <div class="flex items-center gap-4 text-slate-300">
+                                    <span class="material-symbols-outlined text-primary">p_control</span>
+                                    <span>Free parking on premises</span>
+                                </div>
+                                <div class="flex items-center gap-4 text-slate-300">
+                                    <span class="material-symbols-outlined text-primary">ac_unit</span>
+                                    <span>Central Air Conditioning</span>
+                                </div>
+                            </div>
+                            <button
+                                class="px-6 py-2 border border-white/20 text-white rounded-lg text-sm font-bold hover:bg-surface-dark transition-colors w-fit mt-2">
+                                Show all 45 amenities
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col gap-6 pt-8 border-t border-neutral-dark/30">
+                            <h3 class="text-xl font-bold text-white">Where you'll be</h3>
+                            <p class="text-slate-400 text-sm">Malibu, California, United States</p>
+                            <div class="h-[300px] w-full bg-surface-dark rounded-xl overflow-hidden relative">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoCVF8kBaRTIwpO89DwaM56RIMfsPmek7Dnn3S-qCveaQaMudu-IZ-yJnFsqGy2qjcp0tprDCb9-CBi-3VaRnj7CUtWrm0aMzuZ6jp1o-LXENR7lHqn0u7tPv66Wc5n_sgyFppHH4J8Pb_0THjrls2xEgolW9-KC5bVgGFXJao5l7XARO-XFNNdK3S-y5SZqYtdrowxg_JAUrMs4P2RzrMNYl6A4RSNYjhXvxthiEFWV5RWZlc-pefn-gnrCgblCfLkxNqGEk246w"
+                                    class="w-full h-full object-cover opacity-50 grayscale" alt="Map">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div
+                                        class="h-12 w-12 bg-primary rounded-full flex items-center justify-center shadow-2xl animate-pulse">
+                                        <span class="material-symbols-outlined text-white">location_on</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Located in a private gated community with direct beach access and near local upscale
+                                dining.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Booking Card -->
+                    <div class="lg:col-span-1">
+                        <div
+                            class="sticky top-28 bg-surface-dark border border-neutral-dark/30 rounded-2xl p-6 shadow-2xl flex flex-col gap-6">
+                            <div class="flex items-end justify-between">
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-2xl font-bold text-white">$1,250</span>
+                                    <span class="text-slate-400">/ night</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-sm">
+                                    <span class="material-symbols-outlined text-primary text-xs fill-1">star</span>
+                                    <span class="text-white font-bold">4.98</span>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 border border-neutral-dark/50 rounded-xl overflow-hidden">
+                                <div class="p-3 border-r border-b border-neutral-dark/50 flex flex-col gap-1">
+                                    <span class="text-[10px] uppercase font-bold text-primary">Check-in</span>
+                                    <span class="text-sm text-white">Add date</span>
+                                </div>
+                                <div class="p-3 border-b border-neutral-dark/50 flex flex-col gap-1">
+                                    <span class="text-[10px] uppercase font-bold text-primary">Checkout</span>
+                                    <span class="text-sm text-white">Add date</span>
+                                </div>
+                                <div class="col-span-2 p-3 flex flex-col gap-1">
+                                    <span class="text-[10px] uppercase font-bold text-primary">Guests</span>
+                                    <span class="text-sm text-white">1 guest</span>
+                                </div>
+                            </div>
+
+                            <a href="complete-application.html"
+                                class="w-full py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-center transition-all shadow-lg flex items-center justify-center gap-2">
+                                Request to Book
+                            </a>
+
+                            <p class="text-center text-xs text-slate-400">You won't be charged yet</p>
+
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between text-slate-300 text-sm">
+                                    <span class="underline">$1,250 x 5 nights</span>
+                                    <span>$6,250</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300 text-sm">
+                                    <span class="underline">Cleaning fee</span>
+                                    <span>$350</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300 text-sm">
+                                    <span class="underline">Service fee</span>
+                                    <span>$892</span>
+                                </div>
+                                <div class="h-px bg-neutral-dark/30 my-2"></div>
+                                <div class="flex justify-between text-white font-bold">
+                                    <span>Total before taxes</span>
+                                    <span>$7,492</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-primary/10 border border-primary/20 rounded-xl p-4 flex gap-3">
+                                <span class="material-symbols-outlined text-primary">verified_user</span>
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-xs font-bold text-white">Booking Protection</span>
+                                    <p class="text-[10px] text-slate-400">Every booking includes free protection from
+                                        Host cancellations and listing inaccuracies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-surface-dark border-t border-neutral-dark/30 py-12 px-6 md:px-10 mt-12">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-primary">
+                        <span class="material-symbols-outlined text-2xl font-bold">domain</span>
+                        <h2 class="text-white text-lg font-bold">Relestate</h2>
+                    </div>
+                    <p class="text-slate-400 text-sm">© 2024 Relestate. All rights reserved.</p>
+                </div>
+                <div class="flex flex-wrap gap-8">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-white text-sm font-bold">Support</span>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Help Center</a>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Safety
+                            information</a>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-white text-sm font-bold">Community</span>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Blog</a>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Forum</a>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-white text-sm font-bold">Relestate</span>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Newsroom</a>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Careers</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

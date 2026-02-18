@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Relestate | Explore Homes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1e293b",
+                        "neutral-dark": "#334155",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Navigation Bar -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between border-b border-neutral-dark/30 bg-background-dark/80 backdrop-blur-md px-6 md:px-10 py-4">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl font-bold">domain</span>
+                    <h2 class="text-white text-xl font-bold leading-tight tracking-tight">Relestate</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-primary text-sm font-semibold leading-normal border-b-2 border-primary pb-1"
+                        href="#">Explore</a>
+                    <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">Saved</a>
+                    <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">My
+                        Trips</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div
+                    class="hidden lg:flex items-center bg-surface-dark rounded-lg px-3 py-1.5 border border-neutral-dark/50">
+                    <span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+                    <input
+                        class="bg-transparent border-none focus:ring-0 text-sm text-white placeholder:text-slate-500 w-48"
+                        placeholder="Search homes..." type="text" />
+                </div>
+                <button class="flex items-center justify-center p-2 text-slate-400 hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <div class="h-8 w-px bg-neutral-dark/50 mx-2"></div>
+                <button class="flex items-center gap-2 group">
+                    <div
+                        class="h-9 w-9 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center overflow-hidden">
+                        <img class="h-full w-full object-cover" data-alt="User profile avatar portrait"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJBcjM6ElpDfrf32dYntVulWpnnrjR18wpmCObKLeSLVeXX4ikgDrDgwaxHAsNaEKztHoi0GdesHiKgMPOWN0f55K0o_8Wl9nQ6n3zKFYa-I-oX5WrGrYTBnLZBNvx9LPjc39STE0ZReE9Kc3I2neSURmdKMJCODNT2UmZtCYUEfseV2cfWh06IO6OXDwQsHoUNSxG6pmtHofjyZjZKXNuukflh6C62LSQohncf9Ve_8Jt4_brCUzc2hb5nlqC3MGWt_6m763VPaI" />
+                    </div>
+                    <span
+                        class="hidden sm:block text-sm font-medium text-slate-200 group-hover:text-white">Profile</span>
+                </button>
+            </div>
+        </header>
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative w-full py-12 px-6 md:px-10">
+                <div class="max-w-7xl mx-auto">
+                    <div class="relative overflow-hidden rounded-xl bg-surface-dark border border-neutral-dark/30 min-h-[320px] md:min-h-[400px] flex flex-col items-center justify-center p-8 text-center"
+                        data-alt="Luxury modern architectural house with lights at dusk"
+                        style='background-image: linear-gradient(rgba(16, 22, 34, 0.7) 0%, rgba(16, 22, 34, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBf5t97A5dnG5aI8bVrAa7-F33u0YyKjStHuaLFjSXU3GIEyLoF7zXWF7vHpAWNLU367IcvOpq-t3SDt2jFl6qJFXJfpDwiO5olSLGBs5IL1MFCB0bccNTQE2uKHDZEVehX6RmrXaVwRpke9ULIix4AjKC2IL727PJ8t4lWHUuplhSQu0dXjaibTkxpB7GB_lGAS9pth2nFCVwBeWR4lmXwItqjUCRFlIRpVVUnGHYpmdRFeQIeuYUA38gSESv6L6ZSCGgYz83xWdg"); background-size: cover; background-position: center;'>
+                        <h1 class="text-white text-4xl md:text-6xl font-bold tracking-tight mb-4">Find your next
+                            sanctuary.</h1>
+                        <p class="text-slate-300 text-base md:text-lg max-w-2xl mb-10">Discover unique homes and
+                            high-end stays in the world's most beautiful locations.</p>
+                        <!-- Search Box -->
+                        <div
+                            class="w-full max-w-4xl bg-background-dark/90 backdrop-blur-md rounded-xl p-2 md:p-3 border border-neutral-dark/50 shadow-2xl">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+                                <div
+                                    class="flex flex-col items-start px-4 py-2 border-b md:border-b-0 md:border-r border-neutral-dark/30">
+                                    <span
+                                        class="text-[10px] uppercase tracking-wider font-bold text-primary">Location</span>
+                                    <input
+                                        class="bg-transparent border-none p-0 focus:ring-0 text-sm text-white placeholder:text-slate-500 w-full"
+                                        placeholder="Where are you going?" type="text" />
+                                </div>
+                                <div
+                                    class="flex flex-col items-start px-4 py-2 border-b md:border-b-0 md:border-r border-neutral-dark/30">
+                                    <span
+                                        class="text-[10px] uppercase tracking-wider font-bold text-primary">Check-in</span>
+                                    <input
+                                        class="bg-transparent border-none p-0 focus:ring-0 text-sm text-white placeholder:text-slate-500 w-full"
+                                        placeholder="Add dates" type="text" />
+                                </div>
+                                <div
+                                    class="flex flex-col items-start px-4 py-2 border-b md:border-b-0 md:border-r border-neutral-dark/30">
+                                    <span
+                                        class="text-[10px] uppercase tracking-wider font-bold text-primary">Check-out</span>
+                                    <input
+                                        class="bg-transparent border-none p-0 focus:ring-0 text-sm text-white placeholder:text-slate-500 w-full"
+                                        placeholder="Add dates" type="text" />
+                                </div>
+                                <div class="flex items-center justify-between pl-4 pr-1">
+                                    <div class="flex flex-col items-start">
+                                        <span
+                                            class="text-[10px] uppercase tracking-wider font-bold text-primary">Guests</span>
+                                        <input
+                                            class="bg-transparent border-none p-0 focus:ring-0 text-sm text-white placeholder:text-slate-500 w-24"
+                                            placeholder="Add guests" type="text" />
+                                    </div>
+                                    <button
+                                        class="bg-primary hover:bg-primary/90 text-white rounded-lg h-10 w-10 flex items-center justify-center transition-all shadow-lg">
+                                        <span class="material-symbols-outlined">search</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Filters -->
+            <section class="px-6 md:px-10 pb-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex items-center gap-3 overflow-x-auto hide-scrollbar py-2">
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-primary text-white px-4 text-sm font-semibold transition-all">
+                            <span class="material-symbols-outlined text-[20px]">castle</span>
+                            <span>Mansions</span>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-surface-dark border border-neutral-dark/30 text-slate-300 hover:text-white px-4 text-sm font-medium transition-all">
+                            <span class="material-symbols-outlined text-[20px]">cabin</span>
+                            <span>Cabins</span>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-surface-dark border border-neutral-dark/30 text-slate-300 hover:text-white px-4 text-sm font-medium transition-all">
+                            <span class="material-symbols-outlined text-[20px]">apartment</span>
+                            <span>Modern</span>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-surface-dark border border-neutral-dark/30 text-slate-300 hover:text-white px-4 text-sm font-medium transition-all">
+                            <span class="material-symbols-outlined text-[20px]">tsunami</span>
+                            <span>Beachfront</span>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-surface-dark border border-neutral-dark/30 text-slate-300 hover:text-white px-4 text-sm font-medium transition-all">
+                            <span class="material-symbols-outlined text-[20px]">landscape</span>
+                            <span>Countryside</span>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-surface-dark border border-neutral-dark/30 text-slate-300 hover:text-white px-4 text-sm font-medium transition-all">
+                            <span class="material-symbols-outlined text-[20px]">home_mini</span>
+                            <span>Tiny Homes</span>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-surface-dark border border-neutral-dark/30 text-slate-300 hover:text-white px-4 text-sm font-medium transition-all">
+                            <span class="material-symbols-outlined text-[20px]">pool</span>
+                            <span>Amazing Pools</span>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-surface-dark border border-neutral-dark/30 text-slate-300 hover:text-white px-4 text-sm font-medium transition-all">
+                            <span class="material-symbols-outlined text-[20px]">ac_unit</span>
+                            <span>Arctic</span>
+                        </button>
+                        <div class="flex-grow"></div>
+                        <button
+                            class="hidden md:flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-surface-dark border border-neutral-dark/30 text-slate-300 px-4 text-sm font-medium">
+                            <span class="material-symbols-outlined text-[20px]">tune</span>
+                            <span>Filters</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Grid Content -->
+            <section class="px-6 md:px-10 pb-20">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex items-center justify-between mb-8">
+                        <h2 class="text-2xl font-bold text-white">Recommended for you</h2>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-slate-400">Sort by:</span>
+                            <button class="text-sm font-semibold text-white flex items-center gap-1">
+                                Featured <span class="material-symbols-outlined text-sm">expand_more</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <!-- Property Card 1 -->
+                        <div
+                            class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-neutral-dark/30 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Modern white luxury villa in Malibu California"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBqp-5UGmbxLo69-aYMhjSfS6G3_t_tb_cwB4UrEmeiAQctuFDLT6sLt_1r0HjLRQToA4T5joqJ-r3ulW9PmwPzeLLrWmm2RR7H1l9Cq8eKxa7hOd-2SONAwR3L5UTKm9m11ehn1OiznQ25bQfO9_er6YfdckfZ69_RXWhesJvRPHpAIbRXuSLqxsMGjRORF25w5jidLFU1RqQMA5nprVmzy-HBkcQzEXkHMem1fZlI5Hg6tx7SUDNFjo5DNs4UqHo3qLacqxbQlI" />
+                                <button
+                                    class="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                </button>
+                                <div
+                                    class="absolute bottom-3 left-3 px-2 py-1 bg-black/50 backdrop-blur-sm rounded text-[10px] font-bold text-white uppercase tracking-wider">
+                                    Guest Favorite</div>
+                            </div>
+                            <div class="p-4 flex flex-col gap-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white truncate text-base">Coastal Modern Villa</h3>
+                                    <div class="flex items-center gap-1 text-sm font-bold text-primary">
+                                        <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate-400 text-sm">Malibu, California</p>
+                                <div class="flex items-center gap-3 text-slate-300 text-xs py-1">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bed</span> 3 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bathtub</span> 2 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">straighten</span> 2,400
+                                        sqft</span>
+                                </div>
+                                <div
+                                    class="mt-2 pt-3 border-t border-neutral-dark/30 flex items-center justify-between">
+                                    <p class="text-white font-bold text-lg">$450 <span
+                                            class="text-slate-400 font-normal text-sm">/ night</span></p>
+                                    <a href="property-details.html"
+                                        class="text-primary font-bold text-sm hover:underline">View details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 2 -->
+                        <div
+                            class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-neutral-dark/30 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Luxury mountain ski chalet in Aspen Colorado"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAChwyzWZw4vQNEaLeZK5mqLnd-j8MlMSBPYgDndea6Q0MTsBz6s53fz_z6d4gIOx_Ai6DEb9eM7UYNeyOLH1yUhgxH-0y_VwVfASmKnBMCFP7ZGgaGi2OG_jjb42dA04OF4Fq0liNv-WgPbDNhtCYduAbUYiIvGdBrNTyBNbG9CwEE5mOimV8a7s3DWbKzM1u2oTVJ49nRWvt5DLCALykqiL8qhO9fMLOSj2gBw6I8vyz2-Sr9k1ffkCKcVyRg9Ro0BRIbhiR5AmQ" />
+                                <button
+                                    class="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                </button>
+                            </div>
+                            <div class="p-4 flex flex-col gap-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white truncate text-base">Luxury Ski-in Chalet</h3>
+                                    <div class="flex items-center gap-1 text-sm font-bold text-primary">
+                                        <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate-400 text-sm">Aspen, Colorado</p>
+                                <div class="flex items-center gap-3 text-slate-300 text-xs py-1">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bed</span> 4 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bathtub</span> 3 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">straighten</span> 3,100
+                                        sqft</span>
+                                </div>
+                                <div
+                                    class="mt-2 pt-3 border-t border-neutral-dark/30 flex items-center justify-between">
+                                    <p class="text-white font-bold text-lg">$275 <span
+                                            class="text-slate-400 font-normal text-sm">/ night</span></p>
+                                    <a href="property-details.html"
+                                        class="text-primary font-bold text-sm hover:underline">View details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 3 -->
+                        <div
+                            class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-neutral-dark/30 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Traditional Japanese ryokan style home in Kyoto"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoCVF8kBaRTIwpO89DwaM56RIMfsPmek7Dnn3S-qCveaQaMudu-IZ-yJnFsqGy2qjcp0tprDCb9-CBi-3VaRnj7CUtWrm0aMzuZ6jp1o-LXENR7lHqn0u7tPv66Wc5n_sgyFppHH4J8Pb_0THjrls2xEgolW9-KC5bVgGFXJao5l7XARO-XFNNdK3S-y5SZqYtdrowxg_JAUrMs4P2RzrMNYl6A4RSNYjhXvxthiEFWV5RWZlc-pefn-gnrCgblCfLkxNqGEk246w" />
+                                <button
+                                    class="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                </button>
+                            </div>
+                            <div class="p-4 flex flex-col gap-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white truncate text-base">Modern Ryokan Home</h3>
+                                    <div class="flex items-center gap-1 text-sm font-bold text-primary">
+                                        <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate-400 text-sm">Kyoto, Japan</p>
+                                <div class="flex items-center gap-3 text-slate-300 text-xs py-1">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bed</span> 3 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bathtub</span> 1 Bath</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">straighten</span> 1,500
+                                        sqft</span>
+                                </div>
+                                <div
+                                    class="mt-2 pt-3 border-t border-neutral-dark/30 flex items-center justify-between">
+                                    <p class="text-white font-bold text-lg">$310 <span
+                                            class="text-slate-400 font-normal text-sm">/ night</span></p>
+                                    <a href="property-details.html"
+                                        class="text-primary font-bold text-sm hover:underline">View details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 4 -->
+                        <div
+                            class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-neutral-dark/30 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Cliffside suite with private caldera view in Santorini Greece"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdVJclL7a-lcXpnrooSIFbhVdMZ-5Gk0yd6f4EOQS9V1dP8qtuLD1zIQ_nh1TiI_hzksS_iUAfhXwGSxwCJ_1iBjhN4MpxuhI9wmOZ0_jgsj2RM4F-OJlg7VqGEEp1FjUJT3lqUFK6t-dBiBNIZhE9gmgGc4H9wowXMjHLcTeX4qI967nfC7WMf2sRLY4XZTQPCqILiaRJkEsa4xhND9B30-ayApd75-f1d9fxEdOs5It859nDxxAmBX_baYwxJnXaOJVkvvuGVYA" />
+                                <button
+                                    class="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                </button>
+                                <div
+                                    class="absolute bottom-3 left-3 px-2 py-1 bg-primary rounded text-[10px] font-bold text-white uppercase tracking-wider">
+                                    New Listing</div>
+                            </div>
+                            <div class="p-4 flex flex-col gap-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white truncate text-base">Cliffside Caldera Suite</h3>
+                                    <div class="flex items-center gap-1 text-sm font-bold text-primary">
+                                        <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate-400 text-sm">Santorini, Greece</p>
+                                <div class="flex items-center gap-3 text-slate-300 text-xs py-1">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bed</span> 2 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bathtub</span> 2 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">straighten</span> 1,200
+                                        sqft</span>
+                                </div>
+                                <div
+                                    class="mt-2 pt-3 border-t border-neutral-dark/30 flex items-center justify-between">
+                                    <p class="text-white font-bold text-lg">$620 <span
+                                            class="text-slate-400 font-normal text-sm">/ night</span></p>
+                                    <a href="property-details.html"
+                                        class="text-primary font-bold text-sm hover:underline">View details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 5 -->
+                        <div
+                            class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-neutral-dark/30 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Tiny desert retreat with stargazing deck in Joshua Tree"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD4-3SU_aOJ2BrqOPfn8ol2pBJvXgfF5jmwpYz7jeO_nCpMbmVZdglUtOiId0ZHoF6ZLdODyJbX-eJzyyuRBUzymYBy6H9MsM2sKZuR3JAt1ALqFJ053iquQA_4oE3x60c3JezgmxbJyMeY2zYa8zMX2UThme6BtEkUxxJzJFD5F263hW5R7IN8ipvb2YwdKqZ3uByeoQUb--oOD1MnAQHYkBcsEnjIGrt4TdSz2AD4vx16R--vmcVSXibJZNZ7WE_uMxlu4l9ZTI" />
+                                <button
+                                    class="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                </button>
+                            </div>
+                            <div class="p-4 flex flex-col gap-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white truncate text-base">Desert Stargazer Cabin</h3>
+                                    <div class="flex items-center gap-1 text-sm font-bold text-primary">
+                                        <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                        <span>4.7</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate-400 text-sm">Joshua Tree, CA</p>
+                                <div class="flex items-center gap-3 text-slate-300 text-xs py-1">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bed</span> 1 Bed</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bathtub</span> 1 Bath</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">straighten</span> 800 sqft</span>
+                                </div>
+                                <div
+                                    class="mt-2 pt-3 border-t border-neutral-dark/30 flex items-center justify-between">
+                                    <p class="text-white font-bold text-lg">$150 <span
+                                            class="text-slate-400 font-normal text-sm">/ night</span></p>
+                                    <a href="property-details.html"
+                                        class="text-primary font-bold text-sm hover:underline">View details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 6 -->
+                        <div
+                            class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-neutral-dark/30 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Historic farmhouse with vineyard in Tuscany Italy"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYCxbpCaz73nOBd_BXwQkMIhm76NTXCr9zArU4b62J8C-A1BeH4KuHEiNSZDyYF6becU_YhRGKvkAGdxa1ARH4hBJi-0liurkfAU2ssqn2uVMXvPeXRkz1pOrCRSZ6wM2aee_SBYKCU1XEqlGTUj4K01cu7mvOgmlyOn0x8FkD-5CzVNOgzaHE6z7hx-iis98MVLa_sNC7_IYyTu-vfFt18rjvip64H3phHT-FxXhkJjnk8yX_YSUrtT5VtPwplG_70N07j9s0740" />
+                                <button
+                                    class="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                </button>
+                            </div>
+                            <div class="p-4 flex flex-col gap-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white truncate text-base">Historic Vineyard Villa</h3>
+                                    <div class="flex items-center gap-1 text-sm font-bold text-primary">
+                                        <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate-400 text-sm">Tuscany, Italy</p>
+                                <div class="flex items-center gap-3 text-slate-300 text-xs py-1">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bed</span> 4 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bathtub</span> 4 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">straighten</span> 3,800
+                                        sqft</span>
+                                </div>
+                                <div
+                                    class="mt-2 pt-3 border-t border-neutral-dark/30 flex items-center justify-between">
+                                    <p class="text-white font-bold text-lg">$540 <span
+                                            class="text-slate-400 font-normal text-sm">/ night</span></p>
+                                    <a href="property-details.html"
+                                        class="text-primary font-bold text-sm hover:underline">View details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 7 -->
+                        <div
+                            class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-neutral-dark/30 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Eco friendly beachfront jungle villa in Tulum Mexico"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnLDwfzMGtShNKth7bnlHUa-1K1Pc5olpY1kE6yUTQ6Xbx5ZK7iCjl5TB-4vDZqaK5V2eEAvs3E6dEBpVbWGyOeHBhS8uzl5TnMGpsayoz5vdmwBlaagxucGA643UROkIg9Z8yPmsb2p8X6co-NBWbCjBygM5KAkl_wbQes6GWy23RCiRZiomJ2oyXtQAkDJdZJzgOboli_ULZNcJR6fC9OGiMu-i13Id3nL3SPBu2tUdKsxcl4VdqS5m55Ik8ONIzE1DAxga0dpE" />
+                                <button
+                                    class="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                </button>
+                            </div>
+                            <div class="p-4 flex flex-col gap-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white truncate text-base">Beachfront Jungle Villa</h3>
+                                    <div class="flex items-center gap-1 text-sm font-bold text-primary">
+                                        <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                        <span>4.6</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate-400 text-sm">Tulum, Mexico</p>
+                                <div class="flex items-center gap-3 text-slate-300 text-xs py-1">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bed</span> 2 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bathtub</span> 2 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">straighten</span> 1,400
+                                        sqft</span>
+                                </div>
+                                <div
+                                    class="mt-2 pt-3 border-t border-neutral-dark/30 flex items-center justify-between">
+                                    <p class="text-white font-bold text-lg">$380 <span
+                                            class="text-slate-400 font-normal text-sm">/ night</span></p>
+                                    <a href="property-details.html"
+                                        class="text-primary font-bold text-sm hover:underline">View details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 8 -->
+                        <div
+                            class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-neutral-dark/30 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Panoramic mountain view chalet with spa in Swiss Alps"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQP5Up5waJOikVuI9ODBTeHUl1g7YPhw0-meJdJHrXTXIIO2pZz3rnSdYQvQKZZJEIN1YSabsoL-SpYlVKOSrmPfvRTlTH4GVEt6qNyOS-v_QVfO4-CN0LvbYG7OLwgKYeOGQ_ver8yJJst92GXe1Axn_ucbxaFqHcA42ZKX5VgjMs0nNgHnVJpJTQjbdQgL-Q4dLaNORSZ3pLTgCE0m-6T8OU9vEHt9wi3rIQJhxavqqDU-uOgHPX7ucqUPNZ33pRr1MSP2q9HF8" />
+                                <button
+                                    class="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                </button>
+                            </div>
+                            <div class="p-4 flex flex-col gap-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white truncate text-base">Alpine Spa Chalet</h3>
+                                    <div class="flex items-center gap-1 text-sm font-bold text-primary">
+                                        <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate-400 text-sm">Valais, Switzerland</p>
+                                <div class="flex items-center gap-3 text-slate-300 text-xs py-1">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bed</span> 5 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">bathtub</span> 4 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-sm">straighten</span> 4,500
+                                        sqft</span>
+                                </div>
+                                <div
+                                    class="mt-2 pt-3 border-t border-neutral-dark/30 flex items-center justify-between">
+                                    <p class="text-white font-bold text-lg">$890 <span
+                                            class="text-slate-400 font-normal text-sm">/ night</span></p>
+                                    <a href="property-details.html"
+                                        class="text-primary font-bold text-sm hover:underline">View details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 flex justify-center">
+                        <button
+                            class="px-8 py-3 bg-surface-dark border border-neutral-dark/50 text-white rounded-lg font-bold hover:bg-neutral-dark transition-colors">
+                            Show more experiences
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Map Toggle FAB -->
+        <button
+            class="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 bg-slate-900 text-white px-6 py-3 rounded-full flex items-center gap-2 shadow-2xl border border-white/10 hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined">map</span>
+            <span class="font-bold text-sm uppercase tracking-wider">Show Map</span>
+        </button>
+        <!-- Footer -->
+        <footer class="bg-surface-dark border-t border-neutral-dark/30 py-12 px-6 md:px-10">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-primary">
+                        <span class="material-symbols-outlined text-2xl font-bold">domain</span>
+                        <h2 class="text-white text-lg font-bold">Relestate</h2>
+                    </div>
+                    <p class="text-slate-400 text-sm">© 2024 Relestate. All rights reserved.</p>
+                </div>
+                <div class="flex flex-wrap gap-8">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-white text-sm font-bold">Support</span>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Help Center</a>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Safety
+                            information</a>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-white text-sm font-bold">Community</span>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Blog</a>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Forum</a>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-white text-sm font-bold">Relestate</span>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Newsroom</a>
+                        <a class="text-slate-400 text-xs hover:text-white transition-colors" href="#">Careers</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a class="h-8 w-8 rounded-full bg-neutral-dark flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">language</span>
+                    </a>
+                    <a class="h-8 w-8 rounded-full bg-neutral-dark flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">public</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
