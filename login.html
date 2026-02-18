@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Relestate | Login</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-dark": "#0a0f18",
+                        "surface-dark": "#161e2d",
+                        "neutral-dark": "#334155",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-slate-100 min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-md">
+        <!-- Logo -->
+        <div class="flex flex-col items-center gap-4 mb-10">
+            <a href="index.html" class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined text-4xl font-bold">domain</span>
+                <h1 class="text-white text-2xl font-bold tracking-tight">Relestate</h1>
+            </a>
+            <p class="text-slate-400 text-sm">Welcome back! Please enter your details.</p>
+        </div>
+
+        <!-- Form -->
+        <div class="bg-surface-dark border border-slate-800 rounded-3xl p-8 shadow-2xl">
+            <form id="loginForm" class="flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <label for="email" class="text-xs font-bold uppercase tracking-widest text-slate-500">Email
+                        Address</label>
+                    <input type="email" id="email" required
+                        class="bg-background-dark border-slate-800 rounded-xl px-4 py-3 text-white focus:ring-primary focus:border-primary transition-all placeholder:text-slate-600"
+                        placeholder="julia@example.com">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <label for="password"
+                            class="text-xs font-bold uppercase tracking-widest text-slate-500">Password</label>
+                        <a href="#" class="text-[10px] font-bold text-primary hover:underline">Forgot password?</a>
+                    </div>
+                    <input type="password" id="password" required
+                        class="bg-background-dark border-slate-800 rounded-xl px-4 py-3 text-white focus:ring-primary focus:border-primary transition-all placeholder:text-slate-600"
+                        placeholder="••••••••">
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <input type="checkbox" id="remember"
+                        class="h-4 w-4 bg-background-dark border-slate-800 rounded text-primary focus:ring-primary">
+                    <label for="remember" class="text-xs text-slate-400">Remember me for 30 days</label>
+                </div>
+
+                <button type="submit"
+                    class="w-full py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 mt-2">
+                    Sign in
+                </button>
+            </form>
+
+            <div class="relative my-8">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-slate-800"></div>
+                </div>
+                <div class="relative flex justify-center text-xs uppercase">
+                    <span class="bg-surface-dark px-2 text-slate-500 font-bold tracking-widest">Or continue with</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <button
+                    class="flex items-center justify-center gap-2 py-3 border border-slate-800 rounded-xl hover:bg-slate-800 transition-colors">
+                    <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" class="h-4 w-4"
+                        alt="Google">
+                    <span class="text-xs font-bold">Google</span>
+                </button>
+                <button
+                    class="flex items-center justify-center gap-2 py-3 border border-slate-800 rounded-xl hover:bg-slate-800 transition-colors">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        class="h-4 w-4 invert" alt="Apple">
+                    <span class="text-xs font-bold">Apple ID</span>
+                </button>
+            </div>
+        </div>
+
+        <p class="text-center mt-8 text-sm text-slate-400">
+            Don't have an account? <a href="#" class="text-primary font-bold hover:underline">Sign up for free</a>
+        </p>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
